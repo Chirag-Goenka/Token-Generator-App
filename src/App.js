@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { TextField, Button, Grid, Typography, Box, Container } from '@mui/material';
 
 const App = () => {
-  const [blueTokens, setBlueTokens] = useState(0);
+  const [blueTokens, setBlueTokens] = useState('');
   const [bluePrefix, setBluePrefix] = useState('');
-  const [blueTokensPerRow, setBlueTokensPerRow] = useState(3);
-  const [redTokens, setRedTokens] = useState(0);
+  const [blueTokensPerRow, setBlueTokensPerRow] = useState('');
+  const [redTokens, setRedTokens] = useState('');
   const [redPrefix, setRedPrefix] = useState('');
-  const [redTokensPerRow, setRedTokensPerRow] = useState(3);
+  const [redTokensPerRow, setRedTokensPerRow] = useState('');
   const [tokensDisplay, setTokensDisplay] = useState([]);
 
   const generateTokens = () => {
