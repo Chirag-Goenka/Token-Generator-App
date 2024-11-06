@@ -26,11 +26,16 @@ const App = () => {
     setTokensDisplay([]);
   };
 
-  const renderTokens = (tokens, perRow) => (
+  const renderTokens = (tokens, perRow, color) => (
     <Grid container spacing={2}>
       {tokens.map((token, index) => (
         <Grid item key={index} xs={12 / perRow}>
-          <Box textAlign="center" bgcolor="lightgray" padding={1} borderRadius={1}>
+          <Box
+            textAlign="center"
+            padding={1}
+            borderRadius={1}
+            style={{ backgroundColor: color, color: 'white' }} // Set token color here
+          >
             {token}
           </Box>
         </Grid>
@@ -64,14 +69,14 @@ const App = () => {
       {tokensDisplay.blue && (
         <Box mb={4}>
           <Typography variant="h6">Blue Tokens</Typography>
-          {renderTokens(tokensDisplay.blue, blueTokensPerRow)}
+          {renderTokens(tokensDisplay.blue, blueTokensPerRow, 'blue')}
         </Box>
       )}
 
       {tokensDisplay.red && (
         <Box mb={4}>
           <Typography variant="h6">Red Tokens</Typography>
-          {renderTokens(tokensDisplay.red, redTokensPerRow)}
+          {renderTokens(tokensDisplay.red, redTokensPerRow, 'red')}
         </Box>
       )}
     </Container>
