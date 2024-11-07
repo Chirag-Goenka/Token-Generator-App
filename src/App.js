@@ -17,10 +17,10 @@ const App = () => {
   };
 
   const clearFields = () => {
-    setBlueTokens('');
+    setBlueTokens(3);
     setBluePrefix('');
     setBlueTokensPerRow('');
-    setRedTokens('');
+    setRedTokens(3);
     setRedPrefix('');
     setRedTokensPerRow('');
     setTokensDisplay([]);
